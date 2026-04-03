@@ -1,0 +1,239 @@
+{
+  "info": {
+    "_postman_id": "6dc6b97b-f378-40b4-9744-00afdfdbd11d",
+    "name": "Proyecto senior",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37951877"
+  },
+  "item": [
+    {
+      "name": "Add user",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Diego",
+              "type": "text",
+              "uuid": "589377bc-4506-42ba-9fad-191913e86c1a"
+            },
+            {
+              "key": "lastname",
+              "value": "Reyes",
+              "type": "text",
+              "uuid": "f2557e79-2570-4fa1-a3e2-bbc3ebbbe531"
+            },
+            {
+              "key": "email",
+              "value": "diego12334@gmail.com",
+              "type": "text",
+              "uuid": "2005b498-6f71-46a7-a698-b23628e1ac85"
+            },
+            {
+              "key": "status",
+              "value": "active",
+              "type": "text",
+              "uuid": "4fd400f8-5646-43c0-abf0-64a8f1237d03",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "Dock241195.",
+              "type": "text",
+              "uuid": "c1278d00-06e1-4d85-8cb1-df7951bdd4d6"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3678/Api/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3678",
+          "path": [
+            "Api",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "email",
+              "value": "diego1234@gmail.com",
+              "type": "text",
+              "uuid": "826b7e94-6db3-45b8-b757-5e8bda551144"
+            },
+            {
+              "key": "password",
+              "value": "Dock241195.",
+              "type": "text",
+              "uuid": "0e9a61e4-07c2-41c1-9692-5887e1044616"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3678/Api/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3678",
+          "path": [
+            "Api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Allusers",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3678/api/users",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3678",
+          "path": [
+            "api",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "name",
+              "value": "Alejandro",
+              "type": "text",
+              "uuid": "980e7c03-9017-4feb-a547-448e72892ccb"
+            },
+            {
+              "key": "lastname",
+              "value": "Revolorio",
+              "type": "text",
+              "uuid": "f2f1275f-5a67-4e47-beda-e7c23cbc4f08"
+            },
+            {
+              "key": "email",
+              "value": "diego22433@gmail.com",
+              "type": "text",
+              "uuid": "dd867b0b-540f-4ca1-865d-2c3cc9812186"
+            },
+            {
+              "key": "password",
+              "value": "Dock22433..",
+              "type": "text",
+              "uuid": "fb5ceecf-05ea-4d9a-bdf8-fed8bea5f3f7"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3678/api/users/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3678",
+          "path": [
+            "api",
+            "users",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "69ced96257ee8a9ef3419a06"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "{{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3678/api/users/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3678",
+          "path": [
+            "api",
+            "users",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
